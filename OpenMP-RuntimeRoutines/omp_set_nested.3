@@ -1,0 +1,21 @@
+.\" Manpage for omp_set_nested.
+.TH man 3 "14 Oct 2017" "1.0" "omp_set_nested"
+
+.SH NAME
+omp_set_nested \- Enable/disable nested parallel regions
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_set_nested(int nested);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_set_nested(nested) logical, intent(in) :: nested            
+
+.SH DESCRIPTION
+Enable or disable nested parallel regions, i.e., whether team members are allowed to create new teams.  The function takes the language-specific equivalent of true and false, where true enables dynamic adjustment of team sizes and false disables it.      
+
+.SH SEE ALSO OMP_NESTED(3), omp_get_nested(3)

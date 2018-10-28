@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_thread_num.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_thread_num"
+
+.SH NAME
+omp_get_thread_num \- Current thread ID
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_thread_num(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_thread_num()            
+
+.SH DESCRIPTION
+Returns a unique thread identification number within the current team.  In a sequential parts of the program, omp_get_thread_num always returns 0.  In parallel regions the return value varies from 0 to omp_get_num_threads-1 inclusive.  The return value of the master thread of a team is always 0.      
+
+.SH SEE ALSO omp_get_num_threads(3), omp_get_ancestor_thread_num(3)

@@ -1,0 +1,21 @@
+.\" Manpage for omp_test_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_test_lock"
+
+.SH NAME
+omp_test_lock \- Test and set simple lock if available
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_test_lock(omp_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+logical function omp_test_lock(svar) integer(omp_lock_kind), intent(inout) :: svar            
+
+.SH DESCRIPTION
+Before setting a simple lock, the lock variable must be initialized by omp_init_lock.  Contrary to omp_set_lock, omp_test_lock does not block if the lock is not available.  This function returns true upon success, false otherwise.  Here, true and false represent their language-specific counterparts.      
+
+.SH SEE ALSO omp_init_lock(3), omp_set_lock(3), omp_set_lock(3)

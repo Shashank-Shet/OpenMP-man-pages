@@ -1,0 +1,21 @@
+.\" Manpage for omp_init_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_init_lock"
+
+.SH NAME
+omp_init_lock \- Initialize simple lock
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_init_lock(omp_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_init_lock(svar) integer(omp_lock_kind), intent(out) :: svar            
+
+.SH DESCRIPTION
+Initialize a simple lock.  After initialization, the lock is in an unlocked state.      
+
+.SH SEE ALSO omp_destroy_lock(3)

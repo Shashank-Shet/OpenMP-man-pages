@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_proc_bind.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_proc_bind"
+
+.SH NAME
+omp_get_proc_bind \- Whether theads may be moved between CPUs
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+mp_proc_bind_t omp_get_proc_bind(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer(kind=omp_proc_bind_kind) function omp_get_proc_bind()            
+
+.SH DESCRIPTION
+This functions returns the currently active thread affinity policy, which is set via OMP_PROC_BIND.  Possible values are omp_proc_bind_false, omp_proc_bind_true, omp_proc_bind_master, omp_proc_bind_close and omp_proc_bind_spread.      
+
+.SH SEE ALSO OMP_PROC_BIND(3), OMP_PLACES(3), GOMP_CPU_AFFINITY(3), (3)

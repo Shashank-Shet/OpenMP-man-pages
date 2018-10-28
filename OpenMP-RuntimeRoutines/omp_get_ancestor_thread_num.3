@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_ancestor_thread_num.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_ancestor_thread_num"
+
+.SH NAME
+omp_get_ancestor_thread_num \- Ancestor thread ID
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_ancestor_thread_num(int level);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_ancestor_thread_num(level) integer level            
+
+.SH DESCRIPTION
+This function returns the thread identification number for the given nesting level of the current thread.  For values of level outside zero to omp_get_level -1 is returned; if level is omp_get_level the result is identical to omp_get_thread_num.      
+
+.SH SEE ALSO omp_get_level(3), omp_get_thread_num(3), omp_get_team_size(3)

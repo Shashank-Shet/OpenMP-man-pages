@@ -1,0 +1,21 @@
+.\" Manpage for omp_set_dynamic.
+.TH man 3 "14 Oct 2017" "1.0" "omp_set_dynamic"
+
+.SH NAME
+omp_set_dynamic \- Enable/disable dynamic teams
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_set_dynamic(int dynamic_threads);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_set_dynamic(dynamic_threads) logical, intent(in) :: dynamic_threads            
+
+.SH DESCRIPTION
+Enable or disable the dynamic adjustment of the number of threads within a team.  The function takes the language-specific equivalent of true and false, where true enables dynamic adjustment of team sizes and false disables it.      
+
+.SH SEE ALSO OMP_DYNAMIC(3), omp_get_dynamic(3)

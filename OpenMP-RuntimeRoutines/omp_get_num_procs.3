@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_num_procs.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_num_procs"
+
+.SH NAME
+omp_get_num_procs \- Number of processors online
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_num_procs(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_num_procs()            
+
+.SH DESCRIPTION
+Returns the number of processors online on that device.      
+
+

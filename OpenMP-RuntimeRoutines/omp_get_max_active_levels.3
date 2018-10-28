@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_max_active_levels.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_max_active_levels"
+
+.SH NAME
+omp_get_max_active_levels \- Maximum number of active regions
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_max_active_levels(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_max_active_levels()            
+
+.SH DESCRIPTION
+This function obtains the maximum allowed number of nested, active parallel regions.      
+
+.SH SEE ALSO omp_set_max_active_levels(3), omp_get_active_level(3)

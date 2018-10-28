@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_wtick.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_wtick"
+
+.SH NAME
+omp_get_wtick \- Get timer precision
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+double omp_get_wtick(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+double precision function omp_get_wtick()            
+
+.SH DESCRIPTION
+Gets the timer precision, i.e., the number of seconds between two successive clock ticks.      
+
+.SH SEE ALSO omp_get_wtime(3)

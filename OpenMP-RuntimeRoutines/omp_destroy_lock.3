@@ -1,0 +1,21 @@
+.\" Manpage for omp_destroy_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_destroy_lock"
+
+.SH NAME
+omp_destroy_lock \- Destroy simple lock
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_destroy_lock(omp_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_destroy_lock(svar) integer(omp_lock_kind), intent(inout) :: svar            
+
+.SH DESCRIPTION
+Destroy a simple lock.  In order to be destroyed, a simple lock must be in the unlocked state.      
+
+.SH SEE ALSO omp_init_lock(3)

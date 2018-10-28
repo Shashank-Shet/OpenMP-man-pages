@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_level.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_level"
+
+.SH NAME
+omp_get_level \- Obtain the current nesting level
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_level(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_level()            
+
+.SH DESCRIPTION
+This function returns the nesting level for the parallel blocks, which enclose the calling call.      
+
+.SH SEE ALSO omp_get_active_level(3)

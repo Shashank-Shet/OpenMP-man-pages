@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_team_num.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_team_num"
+
+.SH NAME
+omp_get_team_num \- Get team number
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_team_num(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_team_num()            
+
+.SH DESCRIPTION
+Returns the team number of the calling thread.      
+
+

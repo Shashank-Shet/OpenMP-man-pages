@@ -1,0 +1,21 @@
+.\" Manpage for omp_unset_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_unset_lock"
+
+.SH NAME
+omp_unset_lock \- Unset simple lock
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_unset_lock(omp_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_unset_lock(svar) integer(omp_lock_kind), intent(inout) :: svar            
+
+.SH DESCRIPTION
+A simple lock about to be unset must have been locked by omp_set_lock or omp_test_lock before.  In addition, the lock must be held by the thread calling omp_unset_lock.  Then, the lock becomes unlocked.  If one or more threads attempted to set the lock before, one of them is chosen to, again, set the lock to itself.      
+
+.SH SEE ALSO omp_set_lock(3), omp_test_lock(3)

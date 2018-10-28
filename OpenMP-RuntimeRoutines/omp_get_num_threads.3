@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_num_threads.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_num_threads"
+
+.SH NAME
+omp_get_num_threads \- Size of the active team
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_num_threads(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_num_threads()            
+
+.SH DESCRIPTION
+Returns the number of threads in the current team.  In a sequential section of the program omp_get_num_threads returns 1.      The default team size may be initialized at startup by the OMP_NUM_THREADS environment variable.  At runtime, the size of the current team may be set either by the NUM_THREADS clause or by omp_set_num_threads.  If none of the above were used to define a specific value and OMP_DYNAMIC is disabled, one thread per CPU online is used.      
+
+.SH SEE ALSO omp_get_max_threads(3), omp_set_num_threads(3), OMP_NUM_THREADS(3)

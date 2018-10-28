@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_max_threads.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_max_threads"
+
+.SH NAME
+omp_get_max_threads \- Maximum number of threads of parallel region
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_max_threads(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_max_threads()            
+
+.SH DESCRIPTION
+Return the maximum number of threads used for the current parallel region that does not use the clause num_threads.      
+
+.SH SEE ALSO omp_set_num_threads(3), omp_set_dynamic(3), omp_get_thread_limit(3)

@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_active_level.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_active_level"
+
+.SH NAME
+omp_get_active_level \- Number of parallel regions
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_active_level(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_active_level()            
+
+.SH DESCRIPTION
+This function returns the nesting level for the active parallel blocks, which enclose the calling call.      
+
+.SH SEE ALSO omp_get_level(3), omp_get_max_active_levels(3), omp_set_max_active_levels(3)

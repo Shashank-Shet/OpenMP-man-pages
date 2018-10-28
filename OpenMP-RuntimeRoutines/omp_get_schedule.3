@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_schedule.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_schedule"
+
+.SH NAME
+omp_get_schedule \- Obtain the runtime scheduling method
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_get_schedule(omp_sched_t *kind, int *modifier);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_get_schedule(kind, modifier) integer(kind=omp_sched_kind) kind integer modifier            
+
+.SH DESCRIPTION
+Obtain the runtime scheduling method.  The kind argument will be set to the value omp_sched_static, omp_sched_dynamic, omp_sched_guided or omp_sched_auto.  The second argument, modifier, is set to the chunk size.      
+
+.SH SEE ALSO omp_set_schedule(3), OMP_SCHEDULE(3)

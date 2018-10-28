@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_default_device.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_default_device"
+
+.SH NAME
+omp_get_default_device \- Get the default device for target regions
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_default_device(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_default_device()            
+
+.SH DESCRIPTION
+Get the default device for target regions without device clause.      
+
+.SH SEE ALSO OMP_DEFAULT_DEVICE(3), omp_set_default_device(3)

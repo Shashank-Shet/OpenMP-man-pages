@@ -1,0 +1,21 @@
+.\" Manpage for omp_set_nest_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_set_nest_lock"
+
+.SH NAME
+omp_set_nest_lock \- Wait for and set nested lock
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_set_nest_lock(omp_nest_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_set_nest_lock(nvar) integer(omp_nest_lock_kind), intent(inout) :: nvar            
+
+.SH DESCRIPTION
+Before setting a nested lock, the lock variable must be initialized by omp_init_nest_lock.  The calling thread is blocked until the lock is available.  If the lock is already held by the current thread, the nesting count for the lock is incremented.      
+
+.SH SEE ALSO omp_init_nest_lock(3), omp_unset_nest_lock(3)

@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_team_size.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_team_size"
+
+.SH NAME
+omp_get_team_size \- Number of threads in a team
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_team_size(int level);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_team_size(level) integer level            
+
+.SH DESCRIPTION
+This function returns the number of threads in a thread team to which either the current thread or its ancestor belongs.  For values of level outside zero to omp_get_level, -1 is returned; if level is zero, 1 is returned, and for omp_get_level, the result is identical to omp_get_num_threads.      
+
+.SH SEE ALSO omp_get_num_threads(3), omp_get_level(3), omp_get_ancestor_thread_num(3)

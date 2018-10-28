@@ -1,0 +1,21 @@
+.\" Manpage for omp_set_default_device.
+.TH man 3 "14 Oct 2017" "1.0" "omp_set_default_device"
+
+.SH NAME
+omp_set_default_device \- Set the default device for target regions
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_set_default_device(int device_num);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_set_default_device(device_num) integer device_num            
+
+.SH DESCRIPTION
+Set the default device for target regions without device clause.  The argument shall be a nonnegative device number.      
+
+.SH SEE ALSO OMP_DEFAULT_DEVICE(3), omp_get_default_device(3)

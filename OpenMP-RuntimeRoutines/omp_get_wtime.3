@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_wtime.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_wtime"
+
+.SH NAME
+omp_get_wtime \- Elapsed wall clock time
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+double omp_get_wtime(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+double precision function omp_get_wtime()            
+
+.SH DESCRIPTION
+Elapsed wall clock time in seconds.  The time is measured per thread, no guarantee can be made that two distinct threads measure the same time.  Time is measured from some "time in the past", which is an arbitrary time guaranteed not to change during the execution of the program.      
+
+.SH SEE ALSO omp_get_wtick(3)

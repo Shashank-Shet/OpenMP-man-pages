@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_cancellation.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_cancellation"
+
+.SH NAME
+omp_get_cancellation \- Whether cancellation support is enabled
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_cancellation(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+logical function omp_get_cancellation()            
+
+.SH DESCRIPTION
+This function returns true if cancellation is activated, false otherwise.  Here, true and false represent their language-specific counterparts.  Unless OMP_CANCELLATION is set true, cancellations are deactivated.      
+
+.SH SEE ALSO OMP_CANCELLATION(3)

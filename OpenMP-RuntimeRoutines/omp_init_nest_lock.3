@@ -1,0 +1,21 @@
+.\" Manpage for omp_init_nest_lock.
+.TH man 3 "14 Oct 2017" "1.0" "omp_init_nest_lock"
+
+.SH NAME
+omp_init_nest_lock \- Initialize nested lock
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+void omp_init_nest_lock(omp_nest_lock_t *lock);            
+
+.SH Fortran:
+.SS Interface:
+.br
+subroutine omp_init_nest_lock(nvar) integer(omp_nest_lock_kind), intent(out) :: nvar            
+
+.SH DESCRIPTION
+Initialize a nested lock.  After initialization, the lock is in an unlocked state and the nesting count is set to zero.      
+
+.SH SEE ALSO omp_destroy_nest_lock(3)

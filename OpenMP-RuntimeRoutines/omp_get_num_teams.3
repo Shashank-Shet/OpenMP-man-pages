@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_num_teams.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_num_teams"
+
+.SH NAME
+omp_get_num_teams \- Number of teams
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_num_teams(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_num_teams()            
+
+.SH DESCRIPTION
+Returns the number of teams in the current team region.      
+
+

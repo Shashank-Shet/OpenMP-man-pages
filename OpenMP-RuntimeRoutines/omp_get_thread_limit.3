@@ -1,0 +1,21 @@
+.\" Manpage for omp_get_thread_limit.
+.TH man 3 "14 Oct 2017" "1.0" "omp_get_thread_limit"
+
+.SH NAME
+omp_get_thread_limit \- Maximum number of threads
+.SH SYNOPSIS
+.SS C/C++:
+.br
+#include<omp.h>
+.br
+int omp_get_thread_limit(void);            
+
+.SH Fortran:
+.SS Interface:
+.br
+integer function omp_get_thread_limit()            
+
+.SH DESCRIPTION
+Return the maximum number of threads of the program.      
+
+.SH SEE ALSO omp_get_max_threads(3), OMP_THREAD_LIMIT(3)
