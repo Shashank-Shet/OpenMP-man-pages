@@ -1,0 +1,9 @@
+.TH man 3 "14 Oct 2017" "1.0" "OMP_SCHEDULE" man page
+
+.SH NAME
+OMP_SCHEDULE \- How threads are scheduled
+
+.SH DESCRIPTION
+Allows to specify schedule type and chunk size.  The value of the variable shall have the form: type[,chunk] where type is one of static, dynamic, guided or auto The optional chunk size shall be a positive integer.  If undefined, dynamic scheduling and a chunk size of 1 is used.      
+
+.SH SEE ALSO omp_set_schedule(3)

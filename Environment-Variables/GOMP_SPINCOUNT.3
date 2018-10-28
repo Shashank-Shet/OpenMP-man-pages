@@ -1,0 +1,12 @@
+.TH man 3 "14 Oct 2017" "1.0" "GOMP_SPINCOUNT" man page
+
+.SH NAME
+GOMP_SPINCOUNT \- Set the busy-wait spin count
+
+.SH DESCRIPTION
+Determines how long a threads waits actively with consuming CPU power before waiting passively without consuming CPU power. The value may be either INFINITE, INFINITY to always wait actively or an integer which gives the number of spins of the busy-wait loop. The integer may optionally be followed by the following suffixes acting as multiplication factors: k (kilo, thousand), M (mega, million), G (giga, billion), or T (tera, trillion). If undefined, 0 is used when OMP_WAIT_POLICY is PASSIVE, 300,000 is used when OMP_WAIT_POLICY is undefined and 30 billion is used when OMP_WAIT_POLICY is ACTIVE. If there are more OpenMP threads than available CPUs, 1000 and 100 spins are used for OMP_WAIT_POLICY being ACTIVE or undefined, respectively; unless the GOMP_SPINCOUNT is lower or OMP_WAIT_POLICY is PASSIVE. 
+
+.SH SEE ALSO
+    OMP_WAIT_POLICY(3)
+
+

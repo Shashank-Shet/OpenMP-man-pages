@@ -1,0 +1,9 @@
+.TH man 3 "14 Oct 2017" "1.0" "OMP_NUM_THREADS" man page
+
+.SH NAME
+OMP_NUM_THREADS \- Specifies the number of threads to use
+
+.SH DESCRIPTION
+Specifies the default number of threads to use in parallel regions.  The value of this variable shall be a comma-separated list of positive integers; the value specified the number of threads to use for the corresponding nested level.  If undefined one thread per CPU is used.      
+
+.SH SEE ALSO omp_set_num_threads(3)

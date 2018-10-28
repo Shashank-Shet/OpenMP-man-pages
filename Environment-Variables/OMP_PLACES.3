@@ -1,0 +1,9 @@
+.TH man 3 "14 Oct 2017" "1.0" "OMP_PLACES" man page
+
+.SH NAME
+OMP_PLACES \- Specifies on which CPUs the theads should be placed
+
+.SH DESCRIPTION
+The thread placement can be either specified using an abstract name or by an explicit list of the places.  The abstract names threads, cores and sockets can be optionally followed by a positive number in parentheses, which denotes the how many places shall be created.  With threads each place corresponds to a single hardware thread; cores to a single core with the corresponding number of hardware threads; and with sockets the place corresponds to a single socket.  The resulting placement can be shown by setting the OMP_DISPLAY_ENV environment variable.      Alternatively, the placement can be specified explicitly as comma-separated list of places.  A place is specified by set of nonnegative numbers in curly braces, denoting the denoting the hardware threads.  The hardware threads belonging to a place can either be specified as comma-separated list of nonnegative thread numbers or using an interval.  Multiple places can also be either specified by a comma-separated list of places or by an interval.  To specify an interval, a colon followed by the count is placed after after the hardware thread number or the place.  Optionally, the length can be followed by a colon and the stride number &ndash; otherwise a unit stride is assumed.  For instance, the following specifies the same places list: "{0,1,2}, {3,4,6}, {7,8,9}, {10,11,12}"; "{0:3}, {3:3}, {7:3}, {10:3}"; and "{0:2}:4:3".      If OMP_PLACES and GOMP_CPU_AFFINITY are unset and OMP_PROC_BIND is either unset or false, threads may be moved between CPUs following no placement policy.      
+
+.SH SEE ALSO OMP_PROC_BIND(3), GOMP_CPU_AFFINITY(3), omp_get_proc_bind(3), OMP_DISPLAY_ENV(3)

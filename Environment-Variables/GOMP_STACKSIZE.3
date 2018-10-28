@@ -1,0 +1,12 @@
+.TH man 3 "14 Oct 2017" "1.0" "GOMP_STACKSIZE" man page
+
+.SH NAME
+GOMP_STACKSIZE \- Set default thread stack size
+
+.SH DESCRIPTION
+Set the default thread stack size in kilobytes. This is different from pthread_attr_setstacksize which gets the number of bytes as an argument. If the stack size cannot be set due to system constraints, an error is reported and the initial stack size is left unchanged. If undefined, the stack size is system dependent. 
+
+.SH SEE ALSO
+    OMP_STACKSIZE(3)
+
+

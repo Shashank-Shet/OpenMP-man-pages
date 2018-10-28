@@ -1,0 +1,9 @@
+.TH man 3 "14 Oct 2017" "1.0" "OMP_DEFAULT_DEVICE" man page
+
+.SH NAME
+OMP_DEFAULT_DEVICE \- Set the device used in target regions
+
+.SH DESCRIPTION
+Set to choose the device which is used in a target region, unless the value is overridden by omp_set_default_device or by a device clause.  The value shall be the nonnegative device number. If no device with the given device number exists, the code is executed on the host.  If unset, device number 0 will be used.      
+
+.SH SEE ALSO omp_get_default_device(3), omp_set_default_device(3), (3)
