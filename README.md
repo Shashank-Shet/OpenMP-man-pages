@@ -1,1 +1,3 @@
-This repository aims to create and store an offline available man page system for OpenMP documentation.
+<h1>OpenMP Documentation</h1>
+The repository is a consolidation of of OpenMP documentation converted to TROFF format for use as man pages on systems which support the man based documentation system.
+
