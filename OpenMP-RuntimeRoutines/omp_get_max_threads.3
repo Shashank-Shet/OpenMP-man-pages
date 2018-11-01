@@ -16,6 +16,6 @@ int omp_get_max_threads(void);
 integer function omp_get_max_threads()            
 
 .SH DESCRIPTION
-Return the maximum number of threads used for the current parallel region that does not use the clause num_threads.      
+Returns an upper bound on the number of threads that could be used to form a new team if a parallel construct without a num_threads clause were encountered after execution returns from this routine. 
 
 .SH SEE ALSO omp_set_num_threads(3), omp_set_dynamic(3), omp_get_thread_limit(3)
