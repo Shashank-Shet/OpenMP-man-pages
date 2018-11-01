@@ -16,6 +16,6 @@ mp_proc_bind_t omp_get_proc_bind(void);
 integer(kind=omp_proc_bind_kind) function omp_get_proc_bind()            
 
 .SH DESCRIPTION
-This functions returns the currently active thread affinity policy, which is set via OMP_PROC_BIND.  Possible values are omp_proc_bind_false, omp_proc_bind_true, omp_proc_bind_master, omp_proc_bind_close and omp_proc_bind_spread.      
+This functions returns the currently active thread affinity policy, which is set via \fBOMP_PROC_BIND\fR environment variable. Possible values are \fBomp_proc_bind_false\fR, \fBomp_proc_bind_true\fR, \fBomp_proc_bind_master\fR, \fBomp_proc_bind_close\fR and \fBomp_proc_bind_spread\fR.      
 
 .SH SEE ALSO OMP_PROC_BIND(3), OMP_PLACES(3), GOMP_CPU_AFFINITY(3), (3)
