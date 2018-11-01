@@ -16,6 +16,4 @@ int omp_get_num_teams(void);
 integer function omp_get_num_teams()            
 
 .SH DESCRIPTION
-Returns the number of teams in the current team region.      
-
-
+Returns the number of teams in the current team region or 1 if called from outside a teams region.
