@@ -8,4 +8,4 @@ The repository is a consolidation of of OpenMP documentation converted to TROFF 
 3. Create a folder named man in your home directory.
 4. Within this directory create a new folder man3. Here 3 denotes the section which represents the type of pages being installed.
 5. Copy the created zip files to the folder man3.
-6. Setup `MANPATH` environment variable to search for pages in this directory.
+6. Setup `MANPATH` environment variable to search for pages in this directory. Do this using: `export MANPATH=$HOME/man:$MANPATH`
