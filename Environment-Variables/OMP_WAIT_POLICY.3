@@ -4,6 +4,6 @@
 OMP_WAIT_POLICY \- How waiting threads are handled
 
 .SH DESCRIPTION
-Specifies whether waiting threads should be active or passive.  If the value is PASSIVE, waiting threads should not consume CPU power while waiting; while the value is ACTIVE specifies that they should.  If undefined, threads wait actively for a short time before waiting passively.      
+Specifies whether waiting threads should be active or passive. If the value is \fBPASSIVE\fR, waiting threads should not consume CPU power while waiting, while the value is \fBACTIVE\fR specifies that they should. If undefined, threads wait actively for a short time before waiting passively.      
 
 .SH SEE ALSO GOMP_SPINCOUNT(3)
