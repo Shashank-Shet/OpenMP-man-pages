@@ -16,6 +16,6 @@ void omp_set_schedule(omp_sched_t kind, int modifier);
 subroutine omp_set_schedule(kind, modifier) integer(kind=omp_sched_kind) kind integer modifier            
 
 .SH DESCRIPTION
-Sets the runtime scheduling method.  The kind argument can have the value omp_sched_static, omp_sched_dynamic, omp_sched_guided or omp_sched_auto.  Except for omp_sched_auto, the chunk size is set to the value of modifier if positive, or to the default value if zero or negative.  For omp_sched_auto the modifier argument is ignored.      
+Sets the runtime scheduling method. The kind argument can have the value \fB omp_sched_static\fR, \fBomp_sched_dynamic\fR, \fBomp_sched_guided\fR or \fBomp_sched_auto\fR.  Except for omp_sched_auto, the chunk size is set to the value of modifier if positive, or to the default value if zero or negative.  For omp_sched_auto the modifier argument is ignored.      
 
 .SH SEE ALSO omp_get_schedule OMP_SCHEDULE(3)
