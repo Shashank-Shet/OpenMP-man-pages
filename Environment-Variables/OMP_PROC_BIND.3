@@ -4,6 +4,6 @@
 OMP_PROC_BIND \- Whether theads may be moved between CPUs
 
 .SH DESCRIPTION
-Specifies whether threads may be moved between processors.  If set to TRUE, OpenMP theads should not be moved; if set to FALSE they may be moved.  Alternatively, a comma separated list with the values MASTER, CLOSE and SPREAD can be used to specify the thread affinity policy for the corresponding nesting level.  With MASTER the worker threads are in the same place partition as the master thread.  With CLOSE those are kept close to the master thread in contiguous place partitions.  And with SPREAD a sparse distribution across the place partitions is used.      When undefined, OMP_PROC_BIND defaults to TRUE when OMP_PLACES or GOMP_CPU_AFFINITY is set and FALSE otherwise.      
+Specifies whether threads may be moved between processors. If set to TRUE, OpenMP theads should not be moved, if set to FALSE they may be moved. Alternatively, a comma separated list with the values \fBmaster\fR, \fBclose\fR and \fBspread\fR can be used to specify the thread affinity policy for the corresponding nesting level.  With \fBmaster\fR the worker threads are in the same place partition as the master thread.  With \fBclose\fR those are kept close to the master thread in contiguous place partitions. And with \fBspread\fR a sparse distribution across the place partitions is used. When undefined, OMP_PROC_BIND defaults to TRUE when OMP_PLACES or GOMP_CPU_AFFINITY is set and FALSE otherwise.      
 
 .SH SEE ALSO OMP_PLACES(3), GOMP_CPU_AFFINITY(3), omp_get_proc_bind(3)
